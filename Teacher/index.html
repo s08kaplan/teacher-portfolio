@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Havva Öğretmen — Portfolyo</title>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- FREE GSAP Core & Plugins (Official CDNs) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/EasePack.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js" defer></script>
+
+  <!-- Custom Animation Script (defer guarantees the DOM is ready) -->
+  <script src="./gsap.js" defer></script>
+</head>
+
+<body>
+
+  <!-- PRELOADER KATMANI -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-icerik">
+      <div class="preloader-logo">HAVVA ÖĞRETMEN</div>
+      <div class="preloader-sayac"><span id="sayac-rakam">0</span>%</div>
+    </div>
+    <div class="preloader-perde"></div>
+  </div>
+
+  <!-- ÖZEL İMLEÇ (CUSTOM CURSOR) -->
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="cursor-follower" class="cursor-follower"></div>
+
+  <!-- HEADER -->
+  <header class="ana-baslik">
+    <div id="logo-kapsayici">
+      <a href="#" class="logo">HAVVA</a>
+    </div>
+
+    <!-- Masaüstü Navigasyon -->
+    <nav class="navigasyon masaustu-nav">
+      <a href="#hakkimda" class="nav-link">Hakkımda</a>
+      <a href="#projeler" class="nav-link">Projelerim</a>
+      <a href="#iletisim" class="nav-link nav-cta">İletişim</a>
+    </nav>
+
+    <!-- Mobil Hamburger Butonu -->
+    <button id="menu-toggle" class="menu-toggle" aria-label="Menüyü Aç/Kapat">
+      <span class="cizgi cizgi-1"></span>
+      <span class="cizgi cizgi-2"></span>
+    </button>
+  </header>
+
+  <!-- MOBİL MENÜ OVERLAY -->
+  <div id="mobile-menu" class="mobile-menu">
+    <nav class="mobile-nav">
+      <a href="#hakkimda" class="mobile-link"><span>01/</span> Hakkımda</a>
+      <a href="#projeler" class="mobile-link"><span>02/</span> Projelerim</a>
+      <a href="#iletisim" class="mobile-link"><span>03/</span> İletişim</a>
+    </nav>
+    <div class="mobile-footer">
+      <p>Havva Öğretmen — Portfolyo</p>
+    </div>
+  </div>
+
+  <!-- BANNER / HERO -->
+  <section class="banner">
+    <div class="banner-icerik">
+      <p class="ilk">Merhaba,</p>
+      <h1 class="isim">Ben Havva Öğretmen</h1>
+      <p class="unvan">İlkokul Öğretmeniyim.Öğrencilerimin, eğitim hayatlarına sağlam temel atarak başlmaları için çaba harcayan bir öğretmenim</p>
+    </div>
+    <div class="banner-gorsel">
+      <div class="gorsel-kutusu"></div>
+    </div>
+  </section>
+
+  <!-- HAKKIMDA -->
+  <section id="hakkimda" class="bolum">
+    <div class="bolum-baslik">
+      <h2>01 / Hakkımda</h2>
+    </div>
+    <p class="hakkimda-metin">
+     Öğrencilerin sadece dersleri değil, hayatı da öğrenmeleri için çaba sarfetmekteyim.
+    </p>
+  </section>
+
+  <!-- PROJELER -->
+  <section id="projeler" class="bolum">
+    <div class="bolum-baslik">
+      <h2>02 / Projelerim</h2>
+    </div>
+    <div class="proje-kartlari">
+      <article class="proje-karti" data-baslik="Eğitici Oyun Materyalleri" data-detay="İlkokul seviyesindeki öğrencilerin analitik düşünme ve motor becerilerini geliştiren eğitici oyun materyali tasarımları.">
+        <div class="kart-gorsel-kapsayici">
+          <div class="kart-gorsel k-1"></div>
+        </div>
+        <div class="proje-bilgi">
+          <span class="proje-kategori">Eğitim Materyali</span>
+          <h3 class="proje-baslik">Eğitici Oyun Materyalleri <span class="ok">↗</span></h3>
+        </div>
+      </article>
+
+      <article class="proje-karti" data-baslik="Atölye Çalışmaları" data-detay="Öğrencilerin sınıf içi etkileşimini, sosyal becerilerini ve yaratıcılıklarını artıran atölye çalışmaları ve etkinlikler.">
+        <div class="kart-gorsel-kapsayici">
+          <div class="kart-gorsel k-2"></div>
+        </div>
+        <div class="proje-bilgi">
+          <span class="proje-kategori">Etkinlik & Atölye</span>
+          <h3 class="proje-baslik">Atölye Çalışmaları <span class="ok">↗</span></h3>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- PROJE DETAY MODAL -->
+  <div id="proje-modal" class="proje-modal">
+    <div class="modal-arkaplan"></div>
+    <div class="modal-icerik">
+      <button class="modal-kapat" aria-label="Kapat">✕</button>
+      <span id="modal-kategori" class="proje-kategori">Kategori</span>
+      <h2 id="modal-baslik">Proje Başlığı</h2>
+      <p id="modal-detay">Proje detay açıklaması burada görünecek.</p>
+    </div>
+  </div>
+
+  <!-- İLETİŞİM / FOOTER -->
+  <footer id="iletisim">
+    <div class="footer-icerik">
+      <h2>Birlikte Çalışalım</h2>
+      <a href="mailto:havva-ogretmen@gmail.com" class="email-link">havva-ogretmen@gmail.com ↗</a>
+    </div>
+    <div class="footer-alt">
+      <p>© 2026 Havva Öğretmen. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
